@@ -1,0 +1,43 @@
+{
+  "engines": {
+    "node": ">= 20.10"
+  },
+  "workspaces": [
+    "packages/*",
+    "docker",
+    "expoapp"
+  ],
+  "//workspaces": [
+    "styleguide"
+  ],
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "conventional-changelog-cli": "^2.1.1",
+    "eslint": "^8.53.0",
+    "eslint-config-startupjs": "workspace:packages/eslint-config-startupjs",
+    "husky": "^4.3.0",
+    "lerna": "^3.22.1",
+    "lint-staged": "^9.5.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "license": "MIT",
+  "packageManager": "yarn@4.0.2+sha256.825003a0f561ad09a3b1ac4a3b3ea6207af2796d54f62a9420520915721f5186",
+  "name": "expeditaeos",
+  "author": "GroverDuBuque",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JanyBlick/expeditaeos.git"
+  },
+  "homepage": "https://github.com/JanyBlick/expeditaeos.git",
+  "version": "1.0.0"
+}
